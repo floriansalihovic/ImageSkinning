@@ -76,6 +76,6 @@
   <s:Label id="labelDisplay"/>
 
   <!--- @copy net.icodeapps.components.Image#closeButton -->
-  <s:Button id="closeButton" right="0"/>
+  <s:Button id="closeButton" height="{labelDisplay.height}" left="{labelDisplay.width}" right="0" width="{labelDisplay.height}"/>
 
 </s:Skin>
