@@ -1,0 +1,6 @@
+@namespace fs "net.icodeapps.components.*";
+
+fs|Image
+{
+    skinClass: ClassReference("net.icodeapps.skins.ImageSkin");
+}
