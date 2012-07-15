@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--
+<!--- The skin class for the net.codeapps.components.Image component.
 
-ADOBE SYSTEMS INCORPORATED
-Copyright 2010 Adobe Systems Incorporated
-All Rights Reserved.
+ @see net.icodeapps.components.Image
 
-NOTICE: Adobe permits you to use, modify, and distribute this file
-in accordance with the terms of the license agreement accompanying it.
-
--->
-
-<!--- The default skin class for the Spark Image component.
-
- @see spark.components.Image
-
- @langversion 3.0
- @playerversion Flash 10
- @playerversion AIR 1.5
- @productversion Flex 4.5
 -->
 <s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009"
         xmlns:s="library://ns.adobe.com/flex/spark"
@@ -26,11 +11,11 @@ in accordance with the terms of the license agreement accompanying it.
         alpha.disabled="0.5">
     
     <s:states>
-        <s:State name="uninitialized" />
+        <s:State name="uninitialized"/>
         <s:State name="loading"/>
-        <s:State name="ready" />
-        <s:State name="invalid" />
-        <s:State name="disabled" />
+        <s:State name="ready"/>
+        <s:State name="invalid"/>
+        <s:State name="disabled"/>
     </s:states>
     
     <fx:Script fb:purpose="styling">
@@ -38,7 +23,7 @@ in accordance with the terms of the license agreement accompanying it.
       /**
        *  @private
        */
-      override protected function updateDisplayList(unscaledWidth:Number, unscaledHeight:Number) : void
+      override protected function updateDisplayList(unscaledWidth:Number, unscaledHeight:Number):void
       {
         // Push backgroundColor and backgroundAlpha directly.
         // Handle undefined backgroundColor by hiding the background object.
@@ -62,13 +47,13 @@ in accordance with the terms of the license agreement accompanying it.
 
   <!-- host component -->
   <fx:Metadata>
-        <![CDATA[
+    <![CDATA[
     /**
      * @copy spark.skins.spark.ApplicationSkin#hostComponent
      */
-    [HostComponent("spark.components.Image")]
+    [HostComponent("net.icodeapps.components.Image")]
     ]]>
-    </fx:Metadata>
+  </fx:Metadata>
 
   <!--- Defines the appearance of the image background. -->
   <s:Rect id="background" left="0" right="0" top="0" bottom="0">
@@ -82,9 +67,15 @@ in accordance with the terms of the license agreement accompanying it.
   <s:BitmapImage id="imageDisplay" left="0" top="0" right="0" bottom="0"/>
 
   <!--- Progress indicator skin part. -->
-  <s:Range id="progressIndicator" skinClass="spark.skins.spark.ImageLoadingSkin" verticalCenter="0" horizontalCenter="0" includeIn="loading" layoutDirection="ltr" />
+  <s:Range id="progressIndicator" skinClass="spark.skins.spark.ImageLoadingSkin" verticalCenter="0" horizontalCenter="0" includeIn="loading" layoutDirection="ltr"/>
 
   <!--- Icon that appears in place of the image when an invalid image is loaded. -->
   <s:BitmapImage id="brokenImageIcon" includeIn="invalid" source="@Embed(source='Assets.swf',symbol='__brokenImage')" verticalCenter="0" horizontalCenter="0"/>
-    
+
+  <!--- @copy net.icodeapps.components.Image#labelDisplay -->
+  <s:Label id="labelDisplay"/>
+
+  <!--- @copy net.icodeapps.components.Image#closeButton -->
+  <s:Button id="closeButton" right="0"/>
+
 </s:Skin>
