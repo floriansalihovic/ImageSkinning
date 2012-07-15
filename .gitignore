@@ -1,0 +1,6 @@
+.idea/
+out/
+html-template/
+*.iml
+
+atlassian-ide-plugin.xml
