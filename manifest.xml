@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<componentPackage>
+    <component id="Image" class="net.icodeapps.components.Image"/>
+    <component id="ImageSkin" class="net.icodeapps.skins.ImageSkin"/>
+</componentPackage>
